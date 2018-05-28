@@ -9,3 +9,9 @@
 
 ## Part III. Vue.js Application connecting to Apollo GraphQL
 [Hands-on Tutorial](/vue-apollo-study.MD)
+
+## Part IV. Create Vue.js Application & AppSync Backend manually
+[Hands-on Tutorial](/vue-appsync-study.MD)
+
+## Part V. Create frontend and backend together
+[Hands-on Tutorial](/vue-cli-plugin-appsync.MD)
