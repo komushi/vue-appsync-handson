@@ -1,4 +1,4 @@
-#Part I. Single file Apollo GraphQL
+# Part I. Single file Apollo GraphQL
 **Create a single file to start an Apollo GraphQL API on Node Express Server**
 
 ## 1. Check Node version
