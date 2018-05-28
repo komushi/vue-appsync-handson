@@ -66,7 +66,7 @@ vue add appsync
 ```
 
 ### 4-4. Create the backend
-**Check the MobileHub Backend, the AppSync Backend & the DynamoDB Table after**
+**Check the MobileHub backend, the AppSync backend & the DynamoDB Table after**
 ```
 awsmobile init --yes
 ```

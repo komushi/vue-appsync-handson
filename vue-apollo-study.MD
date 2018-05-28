@@ -82,7 +82,7 @@ new Vue({
 ```
 
 ## 4. Play with the application
-### 4-1. Start the Apollo GraphQL Backend created at [Part II](/graphql-express-server.MD#5-3-start-the-graphql-api-server)
+### 4-1. Start the Apollo GraphQL backend created at [Part II](/graphql-express-server.MD#5-3-start-the-graphql-api-server)
 
 ### 4-2. Start the Vue.js application
 ```
