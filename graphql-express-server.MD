@@ -1,4 +1,5 @@
-# Create a single file to start an Apollo GraphQL API on Node Express Server
+#Part I. Single file Apollo GraphQL
+**Create a single file to start an Apollo GraphQL API on Node Express Server**
 
 ## 1. Check Node version
 :warning: Make sure you have Node v9.x.x:
@@ -133,6 +134,8 @@ query getBooksByGender{
   } 
 }
 ```
+
+### 5-4. Stop the Node process
 
 # Reference: 
 * [graphql-express-server

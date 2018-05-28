@@ -1,6 +1,8 @@
 # vue-appsync-handson
-**A hands-on to understand GraphQL, AppSync and vue.js.**
+**A series of hands-on tutorials to understand GraphQL, AppSync and vue.js.**
 
-# Hands-on chapters:
 ## Part I. Single file Apollo GraphQL
-* [GraphQL Express Server Hands-on](/graphql-express-server.MD)
+* [Hands-on Tutorial](/graphql-express-server.MD)
+
+## Part II. Multiple API settings with Apollo GraphQL
+* [Hands-on Tutorial](/apollo-express-study.MD)
