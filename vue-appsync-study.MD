@@ -322,10 +322,16 @@ npm run serve
 
 ### 2-7. Access http://localhost:8080/ and play with the AppSyncExample
 ![GraphQL Client App](https://raw.githubusercontent.com/komushi/vue-appsync-study/master/images/app.png)
+**Check DynamoDB 'BookTable' for mutation results**
 
-### 2-8 Check DynamoDB 'BookTable'
+### 2-8. Create another vue application using the same backend created at Step 1
+* Repeat 2-3 with a new project name
+* Repeat 2-4 to the new project
+* Repeat 2-5 to the new peoject - same settings
+* Repeat 2-6 at the new project
+* Repeat 2-7 but the port sould be 8081 - play both applications and observe the interactions
 
-### 2-9 Stop the Node process
+### 2-9. Stop node Node processes
 
 # Reference: 
 * [vue-appsync-study](https://github.com/komushi/vue-appsync-study#option-ii-maunal-approach)

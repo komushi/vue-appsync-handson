@@ -25,19 +25,49 @@ vue --version
 awsmobile -V
 ```
 
-## 4. Manually Setup Vue application
-### 4-1. Create a vue project
+### 4. Configure AWS Mobile CLI:
+**Choose your region**
+
 ```
-vue create my-vue-appsync-app
+$awsmobile configure aws
+
+configure aws
+? accessKeyId:  <accessKeyId>
+? secretAccessKey:  <secretAccessKey>
+? region:  ap-northeast-1
 ```
 
-### 4-2. Apply the AppSync plugin
+
+## 5. Setup Vue application
+### 5-1. Create a vue project
+**Use Babel, Router, Linter with default settings**
+```
+vue create my-new-app
+
+Vue CLI v3.0.0-beta.15
+? Please pick a preset: Manually select features
+? Check the features needed for your project: 
+ ◉ Babel
+ ◯ TypeScript
+ ◯ Progressive Web App (PWA) Support
+❯◉ Router
+ ◯ Vuex
+ ◯ CSS Pre-processors
+ ◉ Linter / Formatter
+ ◯ Unit Testing
+ ◯ E2E Testing
+```
+
+### 5-2. Apply the AppSync plugin
 ```
 cd my-vue-appsync-app
 vue add appsync
+
+? Add an AppSync Example page? Yes
+? What is the authentication type? API_KEY
 ```
 
-### 4-3. Check the AppSync settings example at awsmobilejs/backend/appsync
+### 5-3. Check the AppSync settings example at awsmobilejs/backend/appsync
 ```
 ./awsmobilejs/
 └── backend
@@ -65,7 +95,7 @@ vue add appsync
     └── mobile-hub-project.yml
 ```
 
-### 4-4. Create the backend
+### 5-4. Create the backend
 **Check the MobileHub backend, the AppSync backend & the DynamoDB Table after**
 ```
 awsmobile init --yes
@@ -86,12 +116,6 @@ awsmobile run
 ## 5. Access http://localhost:8080/ and play with the Vue application with the support of AWS AppSync API
 
 ## 6. Stop the Node process
-
-## 7. Challenges
-
-### 7-1: Create UpdateBook and Subscription for OnUpdateBook
-
-### 7-2: Update my-vue-appsync-study/src/components/AppSyncExample.vue to enable 'Book info edit'
 
 # Reference: 
 * [vue-appsync-study](https://github.com/komushi/vue-appsync-study#option-i-streamlined-approach-by-using-vue-cli-plugin-appsync-and-aws-mobile-cli)

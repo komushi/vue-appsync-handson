@@ -15,3 +15,9 @@
 
 ## Part V. Create frontend and backend together
 [Hands-on Tutorial](/vue-cli-plugin-appsync.MD)
+
+## Part VI. Challenges
+**Based on Part IV or Part V, add a new feature of editing a book's author name**
+### 7-1: Create UpdateBook and Subscription for OnUpdateBook under src/appsync/graphql/
+
+### 7-2: Update src/appsync/components/AppSyncExample.vue to enable 'Book info edit'
