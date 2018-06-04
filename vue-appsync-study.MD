@@ -271,8 +271,23 @@ vue --version
 ```
 
 ### 2-3. Create a vue project
+Create a project with vue-cli 3.x:
+**Use Babel, Router, Linter with default settings**
 ```
-vue create my-vue-appsync-app
+vue create my-new-app
+
+Vue CLI v3.0.0-beta.15
+? Please pick a preset: Manually select features
+? Check the features needed for your project: 
+ ◉ Babel
+ ◯ TypeScript
+ ◯ Progressive Web App (PWA) Support
+❯◉ Router
+ ◯ Vuex
+ ◯ CSS Pre-processors
+ ◉ Linter / Formatter
+ ◯ Unit Testing
+ ◯ E2E Testing
 ```
 
 ### 2-4. Apply the AppSync plugin
@@ -281,6 +296,9 @@ vue create my-vue-appsync-app
 ```
 cd my-vue-appsync-app
 vue add appsync
+
+? Add an AppSync Example page? Yes
+? What is the authentication type? API_KEY
 ```
 
 ### 2-5. Modify aws-exports.js
