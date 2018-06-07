@@ -299,6 +299,7 @@ vue add appsync
 
 ? Add an AppSync Example page? Yes
 ? What is the authentication type? API_KEY
+? Deploy the AWS AppSync and AWS Mobile Hub Backends? No
 ```
 
 ### 2-5. Modify aws-exports.js

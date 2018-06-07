@@ -64,7 +64,8 @@ cd my-vue-appsync-app
 vue add appsync
 
 ? Add an AppSync Example page? Yes
-? What is the authentication type? API_KEY
+? What is the authentication type? AMAZON_COGNITO_USER_POOLS
+? Deploy the AWS AppSync and AWS Mobile Hub Backends? Yes
 ```
 
 ### 5-3. Check the AppSync settings example at awsmobilejs/backend/appsync
@@ -95,13 +96,7 @@ vue add appsync
     └── mobile-hub-project.yml
 ```
 
-### 5-4. Create the backend
-**Check the MobileHub backend, the AppSync backend & the DynamoDB Table after**
-```
-awsmobile init --yes
-```
-
-### 4-5. Start your app
+### 5-4. Start your app
 
 ```
 npm run serve
@@ -113,9 +108,6 @@ npm run serve
 awsmobile run
 ```
 
-## 5. Access http://localhost:8080/ and play with the Vue application with the support of AWS AppSync API
+## 6. Access http://localhost:8080/ and play with the Vue application with the support of AWS AppSync API
 
-## 6. Stop the Node process
-
-# Reference: 
-* [vue-appsync-study](https://github.com/komushi/vue-appsync-study#option-i-streamlined-approach-by-using-vue-cli-plugin-appsync-and-aws-mobile-cli)
+## 7. Stop the Node process
