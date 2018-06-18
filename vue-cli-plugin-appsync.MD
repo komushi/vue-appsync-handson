@@ -60,10 +60,11 @@ Vue CLI v3.0.0-beta.15
 
 ### 5-2. Apply the AppSync plugin
 ```
-cd my-vue-appsync-app
+cd create my-new-app
 vue add appsync
 
 ? Add an AppSync Example page? Yes
+? What is the datasource type? AMAZON_DYNAMODB
 ? What is the authentication type? AMAZON_COGNITO_USER_POOLS
 ? Deploy the AWS AppSync and AWS Mobile Hub Backends? Yes
 ```

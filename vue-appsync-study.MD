@@ -15,7 +15,7 @@ type Query {
 
 type Book { 
     title: String!
-    gender: Gender!
+    gender: Gender
     author: String
 }
 
@@ -34,7 +34,7 @@ schema {
 ```
 type Book {
     title: String!
-    gender: Gender!
+    gender: Gender
     author: String
 }
 
@@ -45,7 +45,7 @@ type BookConnection {
 
 input CreateBookInput {
     title: String!
-    gender: Gender!
+    gender: Gender
     author: String
 }
 
@@ -82,7 +82,7 @@ type Subscription {
 
 input UpdateBookInput {
     title: String!
-    gender: Gender!
+    gender: Gender
     author: String
 }
 
@@ -298,6 +298,7 @@ cd my-vue-appsync-app
 vue add appsync
 
 ? Add an AppSync Example page? Yes
+? What is the datasource type? AMAZON_DYNAMODB
 ? What is the authentication type? API_KEY
 ? Deploy the AWS AppSync and AWS Mobile Hub Backends? No
 ```
