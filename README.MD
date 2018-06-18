@@ -18,6 +18,6 @@
 
 ## Part VI. Challenges
 **Based on Part IV or Part V, add a new feature of editing a book's author name**
-### 7-1: Create UpdateBook and Subscription for OnUpdateBook under src/appsync/graphql/
+### 6-1: Create UpdateBook and Subscription for OnUpdateBook under src/appsync/graphql/
 
-### 7-2: Update src/appsync/components/AppSyncExample.vue to enable 'Book info edit'
+### 6-2: Update src/appsync/components/AppSyncExample.vue to enable 'Book info edit'

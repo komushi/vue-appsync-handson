@@ -65,7 +65,7 @@ vue add appsync
 
 ? Add an AppSync Example page? Yes
 ? What is the datasource type? AMAZON_DYNAMODB
-? What is the authentication type? AMAZON_COGNITO_USER_POOLS
+? What is the authentication type? API_KEY
 ? Deploy the AWS AppSync and AWS Mobile Hub Backends? Yes
 ```
 

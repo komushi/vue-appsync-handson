@@ -10,7 +10,6 @@
 ```
 type Query { 
     getAllBooks: [Book]
-    getBooksByGender(gender: Gender): [Book]
 }
 
 type Book { 
@@ -29,71 +28,77 @@ schema {
 }
 ```
 
-### 1-2. After applying to AWS AppSync with a DynamoDB Table BookTable created
-**Need to mannualy update CreateBookInput and UpdateBookInput for gender (enum type)**
+### 1-2. Create a DynamoDB Resource 
+**Click the "Create Resouces" button**
+* Select a type: Book
+* Table name: BookTable
+* Primary Key: title
+* Sort Key: None
+* Additional Indexes: None
+
+### 1-3. Manually update CreateBookInput and UpdateBookInput for gender (enum type)
 ```
 type Book {
-    title: String!
-    gender: Gender
-    author: String
+  title: String!
+  gender: Gender
+  author: String
 }
 
 type BookConnection {
-    items: [Book]
-    nextToken: String
+  items: [Book]
+  nextToken: String
 }
 
 input CreateBookInput {
-    title: String!
-    gender: Gender
-    author: String
+  title: String!
+  author: String
+  gender: Gender
 }
 
 input DeleteBookInput {
-    title: String!
+  title: String!
 }
 
 enum Gender {
-    Male
-    Female
+  Male
+  Female
 }
 
 type Mutation {
-    createBook(input: CreateBookInput!): Book
-    updateBook(input: UpdateBookInput!): Book
-    deleteBook(input: DeleteBookInput!): Book
+  createBook(input: CreateBookInput!): Book
+  updateBook(input: UpdateBookInput!): Book
+  deleteBook(input: DeleteBookInput!): Book
 }
 
 type Query {
-    getAllBooks: [Book]
-    getBooksByGender(gender: Gender): [Book]
-    getBook(title: String!): Book
-    listBooks(first: Int, after: String): BookConnection
+  getAllBooks: [Book]
+  getBook(title: String!): Book
+  listBooks(first: Int, after: String): BookConnection
 }
 
 type Subscription {
-    onCreateBook(title: String, author: String): Book
-        @aws_subscribe(mutations: ["createBook"])
-    onUpdateBook(title: String, author: String): Book
-        @aws_subscribe(mutations: ["updateBook"])
-    onDeleteBook(title: String, author: String): Book
-        @aws_subscribe(mutations: ["deleteBook"])
+  onCreateBook(title: String, author: String): Book
+    @aws_subscribe(mutations: ["createBook"])
+  onUpdateBook(title: String, author: String): Book
+    @aws_subscribe(mutations: ["updateBook"])
+  onDeleteBook(title: String, author: String): Book
+    @aws_subscribe(mutations: ["deleteBook"])
 }
 
 input UpdateBookInput {
-    title: String!
-    gender: Gender
-    author: String
+  title: String!
+  author: String
+  gender: Gender
 }
 
 schema {
-    query: Query
-    mutation: Mutation
-    subscription: Subscription
+  query: Query
+  mutation: Mutation
+  subscription: Subscription
 }
 ```
 
-### 1-3. Try Mutation createBook to add some data
+### 1-4. Try Mutation createBook to add some data
 
 ```
 mutation create{
@@ -103,7 +108,6 @@ mutation create{
     gender
   }
 }
-
 ```
 
 
@@ -134,7 +138,7 @@ mutation create{
 | 嘻游记     | Male       | 无承恩      |
 | 原始物語   | Female     | 姿势部      |
 
-### 1-4. Try Query getBook
+### 1-5. Try Query getBook
 
 ```
 query getBook{
@@ -158,7 +162,7 @@ query getBook{
 }
 ```
 
-### 1-5. Add Resolver for Query getAllBooks and test
+### 1-6. Add Resolver for Query getAllBooks and test
 * Data source name: BookTable
 * Request mapping template
 ```
@@ -188,57 +192,6 @@ query getAllBooks{
 {
   "data": {
     "getAllBooks": [
-      {
-        "title": "嘻游记",
-        "author": "无承恩",
-        "gender": "Male"
-      },
-      {
-        "title": "水许",
-        "author": "师奶庵",
-        "gender": "Male"
-      }
-    ]
-  }
-}
-```
-
-### 1-6. Add Resolver for Query.getBooksByGender
-* Data source name: BookTable
-* Request mapping template
-```
-{
-    "version" : "2017-02-28",
-    "operation" : "Scan",
-    "filter" : {
-        "expression": "gender = :gender",
-        "expressionValues" : {
-            ":gender" : { "S" : "${context.arguments.gender}" }
-        }
-    }
-}
-```
-* Response mapping template
-```
-$utils.toJson($context.result.items)
-```
-
-**Try Query getBooksByGender**
-
-```
-query getBooksByGender{
-  getBooksByGender(gender:Male) {
-    title
-    author
-    gender
-  } 
-}
-```
-
-```
-{
-  "data": {
-    "getBooksByGender": [
       {
         "title": "嘻游记",
         "author": "无承恩",
