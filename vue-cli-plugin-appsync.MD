@@ -112,3 +112,10 @@ awsmobile run
 ## 6. Access http://localhost:8080/ and play with the Vue application with the support of AWS AppSync API
 
 ## 7. Stop the Node process
+
+### 8. Remove Mobile Hub Project
+:warning: **DynamoDB table will not be removed**
+```
+awsmobile delete
+```
+

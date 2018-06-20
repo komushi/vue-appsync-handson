@@ -247,7 +247,7 @@ Vue CLI v3.0.0-beta.15
 **Navigate to the newly created project folder and add the cli plugin:**
 
 ```
-cd my-vue-appsync-app
+cd my-new-app
 vue add appsync
 
 ? Add an AppSync Example page? Yes
@@ -287,6 +287,12 @@ npm run serve
 * Repeat 2-7 but the port sould be 8081 - play both applications and observe the interactions
 
 ### 2-9. Stop node Node processes
+
+### 2-10. Remove Mobile Hub Project
+:warning: **DynamoDB table will not be removed**
+```
+awsmobile delete
+```
 
 # Reference: 
 * [vue-appsync-study](https://github.com/komushi/vue-appsync-study#option-ii-maunal-approach)
