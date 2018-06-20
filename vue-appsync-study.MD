@@ -98,7 +98,7 @@ schema {
 }
 ```
 
-### 1-4. Try Mutation createBook to add some data
+### 1-4. Try Mutation createBook to add some data at the 'Queries' page
 
 ```
 mutation create{
@@ -138,7 +138,7 @@ mutation create{
 | 嘻游记     | Male       | 无承恩      |
 | 原始物語   | Female     | 姿势部      |
 
-### 1-5. Try Query getBook
+### 1-5. Try Query getBook at the 'Queries' page
 
 ```
 query getBook{
@@ -176,7 +176,7 @@ query getBook{
 $utils.toJson($context.result.items)
 ```
 
-**Try Query getAllBooks**
+**Try Query getAllBooks at the 'Queries' page**
 
 ```
 query getAllBooks{
