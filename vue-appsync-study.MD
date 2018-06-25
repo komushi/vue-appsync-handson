@@ -229,7 +229,7 @@ Create a project with vue-cli 3.x:
 ```
 vue create my-new-app
 
-Vue CLI v3.0.0-beta.15
+Vue CLI v3.0.0-rc.3
 ? Please pick a preset: Manually select features
 ? Check the features needed for your project: 
  ◉ Babel

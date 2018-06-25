@@ -44,7 +44,7 @@ configure aws
 ```
 vue create my-new-app
 
-Vue CLI v3.0.0-beta.15
+Vue CLI v3.0.0-rc.3
 ? Please pick a preset: Manually select features
 ? Check the features needed for your project: 
  ◉ Babel
@@ -67,6 +67,7 @@ vue add appsync
 ? What is the datasource type? AMAZON_DYNAMODB
 ? What is the authentication type? API_KEY
 ? Deploy the AWS AppSync and AWS Mobile Hub Backends? Yes
+? Publish the production distribution to AWS S3 and CloudFront? No
 ```
 
 ### 5-3. Check the AppSync settings example at awsmobilejs/backend/appsync
