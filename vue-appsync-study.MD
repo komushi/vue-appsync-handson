@@ -279,20 +279,7 @@ npm run serve
 ![GraphQL Client App](https://raw.githubusercontent.com/komushi/vue-appsync-study/master/images/app.png)
 **Check DynamoDB 'BookTable' for mutation results**
 
-### 2-8. Create another vue application using the same backend created at Step 1
-* Repeat 2-3 with a new project name
-* Repeat 2-4 to the new project
-* Repeat 2-5 to the new peoject - same settings
-* Repeat 2-6 at the new project
-* Repeat 2-7 but the port sould be 8081 - play both applications and observe the interactions
-
-### 2-9. Stop node Node processes
-
-### 2-10. Remove Mobile Hub Project
-:warning: **DynamoDB table will not be removed**
-```
-awsmobile delete
-```
+### 2-8. Stop node Node processes
 
 # Reference: 
 * [vue-appsync-study](https://github.com/komushi/vue-appsync-study#option-ii-maunal-approach)
