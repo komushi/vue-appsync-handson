@@ -31,7 +31,7 @@ $ vue add apollo
 ? Add a GraphQL API Server? No
 ```
 
-### 3-3. Edit App.vue to inclued the ApolloExample.vue
+### 3-3. Edit App.vue to inclued the ApolloExample.vue - below is the expected code
 ```
 <template>
   <div id="app">
@@ -66,7 +66,7 @@ export default {
 </style>
 ```
 
-### 3-4. Edit main.js to include vue-apollo provider
+### 3-4. Edit main.js to include vue-apollo provider - below is the expected code
 ```
 import Vue from 'vue'
 import App from './App.vue'

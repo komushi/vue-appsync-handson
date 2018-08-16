@@ -197,7 +197,7 @@ type Query {
 
 type Mutation {
   # Add a message and publish it on 'messages' subscription channel
-  messageAdd (input: MessageInput!): Message!
+  addMessage (input: MessageInput!): Message!
 }
 
 type Subscription {
@@ -224,7 +224,7 @@ module.exports = {
   },
 
   Mutation: {
-    messageAdd: (root, { input }) => {
+    addMessage: (root, { input }) => {
       const message = {
         // id: shortid.generate(),
         id: Date.now(),
