@@ -14,6 +14,7 @@
 [Hands-on Tutorial](/vue-appsync-study.MD)
 
 ## Part V. Create frontend and backend together
+**TODO:Change to amplify-cli**
 [Hands-on Tutorial](/vue-cli-plugin-appsync.MD)
 
 ## Part VI. Challenges
