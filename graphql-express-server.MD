@@ -1,37 +1,38 @@
-# Part I. Single file Apollo GraphQL
-**Create a single file to start an Apollo GraphQL API on Node Express Server**
+# Part I. Single file Apollo GraphQL API
+**Use a single file as an Apollo GraphQL API on Node Express Server**
+**This tutorial guide you to create a basic graphql API using the apollo-server-express. It contains only one index.js file with API schema defnition, mock-up data and a local express server with graphql plugin. You will learn GrpahQL query with this tutorial.**
+
+![Playground](graphql-express-server/screenshot.png "Playground")
 
 ## 1. Check Node version
-:warning: Make sure you have Node v9.x.x:
+**Make sure you have Node v9+**
 
 ```
-node -v
+$ node -v
 ```
 
 ## 2. Create a node.js app from scratch
 **Create a folder for this app**
 ```
-mkdir graphql-express-server
-cd graphql-express-server
+$ mkdir -p graphql-express-server-example
+$ cd graphql-express-server-example
 ```
 
 **Initialize this app with all default options**
 ```
-npm init
+$ npm init
 ```
 
 ## 3. Create a single index.js
 ### 3-1. Reference to Express and Apollo Server libraries
 ```
 const express = require('express');
-const bodyParser = require('body-parser');
-const { graphqlExpress, graphiqlExpress } = require('apollo-server-express');
-const { makeExecutableSchema } = require('graphql-tools');
+const { ApolloServer, gql } = require('apollo-server-express');
 ```
 
 ### 3-2. Add initial data
 ```
-// Some fake data
+// Some mock-up data
 const initBooks = [
   {
     title: "Harry Potter and the Sorcerer's stone",
@@ -49,7 +50,7 @@ const initBooks = [
 ### 3-3. Add Type Definitions
 ```
 // The GraphQL schema in string form
-const typeDefs = `
+const typeDefs = gql`
   type Query { 
     getAllBooks: [Book]
     getBooksByGender(gender: String): [Book]
@@ -73,46 +74,38 @@ const resolvers = {
 };
 ```
 
-### 3-5. Put together a schema
+### 3-5. Put together a schema and ApolloServer
 ```
-const schema = makeExecutableSchema({
-  typeDefs,
-  resolvers,
-});
+const server = new ApolloServer({ typeDefs, resolvers });
 ```
 
-### 3-6. Add code to start Express with Apollo GraphQL and GraphiQL middleware
+### 3-6. Add code to start Express with Apollo GraphQL middleware
 ```
 // Initialize the app
 const app = express();
+server.applyMiddleware({ app });
 
-// The GraphQL endpoint
-app.use('/graphql', bodyParser.json(), graphqlExpress({ schema }));
-
-// GraphiQL, a visual editor for queries
-app.use('/graphiql', graphiqlExpress({ endpointURL: '/graphql' }));
 
 // Start the server
 app.listen(3000, () => {
-  console.log('Go to http://localhost:3000/graphiql to run queries!');
+  console.log('Go to http://localhost:3000/graphql to run queries!');
 });
 ```
 
 ## 4. Install dependencies
 ```
-npm install --save apollo-server-express body-parser express graphql graphql-tools
+$ npm install --save apollo-server-express express
 ```
 
 ## 5. Start graphql-express-server and test
 ### 5-1. Start the Apollo GraphQL Server
 ```
-node index.js
+$ npm start
 ```
 
 ### 5-2. Visit the GraphiQL URL on browser
-```
-http://localhost:3000/graphiql
-```
+http://localhost:3000/graphql
+
 
 ### 5-3. Run the following queries
 ```
@@ -136,7 +129,3 @@ query getBooksByGender{
 ```
 
 ### 5-4. Stop the Node process
-
-# Reference: 
-* [graphql-express-server
-](https://github.com/komushi/graphql-express-server)

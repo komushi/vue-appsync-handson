@@ -1,0 +1,26 @@
+{
+  "name": "apollo-express-study",
+  "version": "1.0.0",
+  "description": "GraphQL API server for vue-apollo-study",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lei Xu",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server-express": "2.17.0",
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "dotenv": "^5.0.1",
+    "express": "^4.16.3",
+    "graphql": "^15.3.0",
+    "graphql-playground-middleware-express": "^1.7.20",
+    "graphql-subscriptions": "^1.1.0",
+    "graphql-tools": "^6.2.1",
+    "lowdb": "^1.0.0",
+    "mkdirp": "^1.0.4",
+    "subscriptions-transport-ws": "^0.9.9"
+  }
+}

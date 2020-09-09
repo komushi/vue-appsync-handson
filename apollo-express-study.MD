@@ -1,25 +1,23 @@
 # Part II. Multiple API settings with Apollo GraphQL
 
 **Multiple API settings example to start an Apollo GraphQL API on Node Express Server**
+**This tutorial guide you to create a basic graphql API using the apollo-server-express. It contains 2 sets of API schema defnition, one of which contains a local storage. You will learn GrpahQL query and mutation with this tutorial.**
+
+![Playground](apollo-express-study/screenshot.png "Playground")
 
 ## 1. Check Node version
-:warning: Make sure you have Node v9.x.x:
+**Make sure you have Node v9+**
 
 ```
-node -v
+$ node -v
 ```
 
 ## 2. Clone the sample application repository
-```
-git clone https://github.com/komushi/apollo-express-study.git
-```
 
 **Note there are 2 API examples under apollo-express-study/graphql-api/**
 **This application only start one API at a time.**
-```
-apollo-express-study $tree
-.
-├── README.MD
+<pre>
+example
 ├── graphql-api
 │   ├── books
 │   │   ├── resolvers.js
@@ -32,14 +30,13 @@ apollo-express-study $tree
 │           ├── db.json
 │           └── upload.js
 ├── index.js
-├── package-lock.json
 └── package.json
-```
+</pre>
 
 ## 3. Install libraries
 ```
-cd apollo-express-study
-npm install
+$ cd apollo-express-study/example
+$ npm install
 ```
 
 ## 4. Play with the "books" API
@@ -51,9 +48,7 @@ API_NAME=books
 **With the settings above the application only use apollo-express-study/graphql-api/books this time.**
 
 <pre>
-apollo-express-study $tree
-.
-├── README.MD
+example
 ├── graphql-api
 │   ├── <b>books</b>
 │   │   <b>├── resolvers.js</b>
@@ -66,12 +61,10 @@ apollo-express-study $tree
 │           ├── db.json
 │           └── upload.js
 ├── index.js
-├── package-lock.json
 └── package.json
 </pre>
 
 ### 4-2. Check the source code of the "books" API
-** Note the following 2 files are almost the same from [Part I](/graphql-express-server.MD#3-create-a-single-indexjs)
 
 **typeDefs.js**
 ```
@@ -118,10 +111,10 @@ module.exports = {
 
 ### 4-3. Start the GraphQL API Server
 ```
-node index.js
+$ npm start
 ```
 
-### 4-4. Test Queries on [Playground](http://localhost:4000/)
+### 4-4. Test Queries on [Playground](http://localhost:4000/graphql)
 ```
 query getAllBooks {
   getAllBooks {
@@ -151,8 +144,7 @@ API_NAME=messaging
 **With the settings above the application only use apollo-express-study/graphql-api/messaging this time.**
 
 <pre>
-apollo-express-study $tree
-.
+example
 ├── README.MD
 ├── graphql-api
 │   ├── books
@@ -166,7 +158,6 @@ apollo-express-study $tree
 │           ├── db.json
 │           └── upload.js</b>
 ├── index.js
-├── package-lock.json
 └── package.json
 </pre>
 
@@ -253,10 +244,10 @@ module.exports = {
 
 ### 5-3. Start the GraphQL API Server
 ```
-node index.js
+$ npm start
 ```
 
-### 5-4. Test Queries and Mutations on [Playground](http://localhost:4000/)
+### 5-4. Test Queries and Mutations on [Playground](http://localhost:4000/graphql)
 **Check apollo-express-study/graphql-api/messaging/utils/db.json while testing.**
 
 **Query the existing messages.**
@@ -269,10 +260,10 @@ query messages{
 }
 ```
 
-**Add new messages.**
+**Add new messages and you will find the changes in graphql-api/messaging/utils/db.json**
 ```
-mutation messageAdd{
-  messageAdd(input:{text:"text001"}) {
+mutation addMessage{
+  addMessage(input:{text:"text001"}) {
     id
     text
   }
