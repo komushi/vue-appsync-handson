@@ -15,11 +15,11 @@ This tutorial guide you to create a basic graphql API using the apollo-server-ex
 This tutorial guide you to create vue application with graphql apollo support. It uses the messaging API from apollo-express-study. You will learn GrpahQL query, mutation, subscription. 
 
 ## Part IV. Create Vue.js Application & AppSync backend manually
-[Hands-on Tutorial](/vue-appsync-study.MD)
+[Hands-on Tutorial](vue-appsync-study.MD)
 This tutorial guide you to 1) create vue application with graphql apollo support, 2) create AWS AppSync backend manually. You will learn GrpahQL on a cloud backend. 
 
-## Part VI. Challenges
-**Based on Part IV or Part V, add a new feature of editing a book's author name**
-### 6-1: Create UpdateBook and Subscription for OnUpdateBook under src/appsync/graphql/
+## Part V. Challenges
+**Based on Part IV add a new feature of editing a book's author name**
+### 1: Create UpdateBook and Subscription for OnUpdateBook under src/appsync/graphql/
 
-### 6-2: Update src/appsync/components/AppSyncExample.vue to enable 'Book info edit'
+### 2: Update src/appsync/components/AppSyncExample.vue to enable 'Book info edit'

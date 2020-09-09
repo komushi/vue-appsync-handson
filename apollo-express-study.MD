@@ -1,9 +1,9 @@
 # Part II. Multiple API settings with Apollo GraphQL
 
 **Multiple API settings example to start an Apollo GraphQL API on Node Express Server**
-**This tutorial guide you to create a basic graphql API using the apollo-server-express. It contains 2 sets of API schema defnition, one of which contains a local storage. You will learn GrpahQL query and mutation with this tutorial.**
+**This tutorial guide you to create a basic graphql API using the apollo-server-express. It contains 2 sets of API schema defnition, one of which contains a local storage. You will learn GrpahQL query and mutation.**
 
-![Playground](apollo-express-study/screenshot.png "Playground")
+![Playground](apollo-express-study/playground.png "Playground")
 
 ## 1. Check Node version
 **Make sure you have Node v9+**

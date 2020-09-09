@@ -1,8 +1,8 @@
 # Part I. Single file Apollo GraphQL API
 **Use a single file as an Apollo GraphQL API on Node Express Server**
-**This tutorial guide you to create a basic graphql API using the apollo-server-express. It contains only one index.js file with API schema defnition, mock-up data and a local express server with graphql plugin. You will learn GrpahQL query with this tutorial.**
+**This tutorial guide you to create a basic graphql API using the apollo-server-express. It contains only one index.js file with API schema defnition, mock-up data and a local express server with graphql plugin. You will learn GrpahQL query.**
 
-![Playground](graphql-express-server/screenshot.png "Playground")
+![Playground](graphql-express-server/playground.png "Playground")
 
 ## 1. Check Node version
 **Make sure you have Node v9+**
