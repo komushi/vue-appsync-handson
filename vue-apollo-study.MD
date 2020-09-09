@@ -1,6 +1,7 @@
 # Part III. Vue.js Application connecting to Apollo GraphQL
 
 **Use vue-cli-plugin-apollo to start a Vue.js Application with Apollo GraphQL backend**
+**This tutorial guide you to create vue application with graphql apollo support. It uses the messaging API from apollo-express-study. You will learn GrpahQL query, mutation, subscription.**
 
 ## 1. Check Node version
 **Make sure you have Node v9+**
@@ -10,27 +11,40 @@ $ node -v
 ```
 
 ## 2. Check vue-cli version
-**Make sure you have vue-cli 3+ or 4+**
+**Make sure you have vue-cli 3+**
 
 ```
 $ npm install -g @vue/cli
 $ vue --version
 ```
 
-## 3. Create this Vue.js application by vue-cli 3+ or 4+ and vue-cli-plugin-apollo
+## 3. Create this Vue.js application by vue-cli 3+ and vue-cli-plugin-apollo
 ### 3-1. Create project
 ```
 $ vue create vue-apollo-study
-Vue CLI v4.5.4
-? Please pick a preset: 
-❯ Default ([Vue 2] babel, eslint) 
-  Default (Vue 3 Preview) ([Vue 3] babel, eslint) 
-  Manually select features 
+Vue CLI v3.12.1
 
-? Please pick a preset: Default ([Vue 2] babel, eslint)
-? Pick the package manager to use when installing dependencies: 
-  Use PNPM 
-❯ Use NPM 
+? Please pick a preset: 
+  default (babel, eslint) 
+❯ Manually select features 
+
+? Please pick a preset: Manually select features
+? Check the features needed for your project: 
+ ◉ Babel
+ ◯ TypeScript
+ ◯ Progressive Web App (PWA) Support
+❯◉ Router
+ ◯ Vuex
+ ◯ CSS Pre-processors
+ ◯ Linter / Formatter
+ ◯ Unit Testing
+ ◯ E2E Testing
+
+? Use history mode for router? (Requires proper server setup for index fallback in production) Yes
+? Where do you prefer placing config for Babel, PostCSS, ESLint, etc.? (Use arrow keys)
+❯ In dedicated config files 
+  In package.json 
+
 ```
 
 ### 3-2. Add apollo plugin by vue-cli-plugin-apollo

@@ -114,7 +114,7 @@ module.exports = {
 $ npm start
 ```
 
-### 4-4. Test Queries on [Playground](http://localhost:4000/graphql)
+### 4-4. Test Queries on http://localhost:4000/graphql
 ```
 query getAllBooks {
   getAllBooks {
@@ -247,7 +247,7 @@ module.exports = {
 $ npm start
 ```
 
-### 5-4. Test Queries and Mutations on [Playground](http://localhost:4000/graphql)
+### 5-4. Test Queries and Mutations on http://localhost:4000/graphql
 **Check apollo-express-study/graphql-api/messaging/utils/db.json while testing.**
 
 **Query the existing messages.**

@@ -5,31 +5,31 @@
 **:rocket: This is how I created a Vue Application with AppSync in one minute!**
 
 ## 1. Check Node version
-:warning: Make sure you have Node v9.x.x:
+**Make sure you have Node v9.x.x**
 
 ```
-node -v
+$ node -v
 ```
 
 ## 2. Check vue-cli version
-:warning: Make sure you have vue-cli 3.x.x:
+**Make sure you have vue-cli 3+**
 
 ```
-vue --version
+$ vue --version
 ```
 
 ## 3. Check AWS Mobile CLI version:
-:warning: Make sure you have awsmobile-cli 1.1.x:
+**Make sure you have awsmobile-cli 1.1.x:**
 
 ```
-awsmobile -V
+$ awsmobile -V
 ```
 
 ### 4. Configure AWS Mobile CLI:
 **Choose your region**
 
 ```
-$awsmobile configure aws
+$ awsmobile configure aws
 
 configure aws
 ? accessKeyId:  <accessKeyId>
@@ -43,8 +43,12 @@ configure aws
 **Use Babel, Router, Linter with default settings**
 ```
 vue create my-new-app
+Vue CLI v3.12.1
 
-Vue CLI v3.0.0-rc.3
+? Please pick a preset: 
+  default (babel, eslint) 
+❯ Manually select features 
+
 ? Please pick a preset: Manually select features
 ? Check the features needed for your project: 
  ◉ Babel
@@ -53,15 +57,21 @@ Vue CLI v3.0.0-rc.3
 ❯◉ Router
  ◯ Vuex
  ◯ CSS Pre-processors
- ◉ Linter / Formatter
+ ◯ Linter / Formatter
  ◯ Unit Testing
  ◯ E2E Testing
+
+? Use history mode for router? (Requires proper server setup for index fallback in production) Yes
+? Where do you prefer placing config for Babel, PostCSS, ESLint, etc.? (Use arrow keys)
+❯ In dedicated config files 
+  In package.json 
+
 ```
 
 ### 5-2. Apply the AppSync plugin
 ```
-cd create my-new-app
-vue add appsync
+$ cd create my-new-app
+$ vue add appsync
 
 ? Add an AppSync Example page? Yes
 ? What is the datasource type? AMAZON_DYNAMODB
@@ -101,22 +111,17 @@ vue add appsync
 ### 5-4. Start your app
 
 ```
-npm run serve
+$ npm run serve
 ```
 
-*Or*
-
-```
-awsmobile run
-```
 
 ## 6. Access http://localhost:8080/ and play with the Vue application with the support of AWS AppSync API
 
 ## 7. Stop the Node process
 
 ### 8. Remove Mobile Hub Project
-:warning: **DynamoDB table will not be removed**
+**DynamoDB table will not be removed**
 ```
-awsmobile delete
+$ awsmobile delete
 ```
 

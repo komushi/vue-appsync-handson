@@ -210,26 +210,35 @@ query getAllBooks{
 ## 2. Manually Setup Vue application
 
 ### 2-1. Check Node version
-:warning: Make sure you have Node v9.x.x:
+**Make sure you have Node v9+**
 
 ```
-node -v
+$ node -v
 ```
 
-### 2-2. Check vue-cli version
-:warning: Make sure you have vue-cli 3.x.x:
+### 2-2. Check vue-cli & awsmobile-cli version
+**Make sure you have vue-cli 3+**
 
 ```
-vue --version
+$ npm install -g @vue/cli@3.12.1
+$ vue --version
+```
+
+**Make sure you have awsmobile-cli 1.1.x**
+```
+$ npm install -g awsmobile-cli
+$ awsmobile --version
 ```
 
 ### 2-3. Create a vue project
-Create a project with vue-cli 3.x:
-**Use Babel, Router, Linter with default settings**
 ```
-vue create my-new-app
+$ vue create vue-appsync-study-example
+Vue CLI v3.12.1
 
-Vue CLI v3.0.0-rc.3
+? Please pick a preset: 
+  default (babel, eslint) 
+❯ Manually select features 
+
 ? Please pick a preset: Manually select features
 ? Check the features needed for your project: 
  ◉ Babel
@@ -238,17 +247,24 @@ Vue CLI v3.0.0-rc.3
 ❯◉ Router
  ◯ Vuex
  ◯ CSS Pre-processors
- ◉ Linter / Formatter
+ ◯ Linter / Formatter
  ◯ Unit Testing
  ◯ E2E Testing
+
+? Use history mode for router? (Requires proper server setup for index fallback in production) Yes
+? Where do you prefer placing config for Babel, PostCSS, ESLint, etc.? (Use arrow keys)
+❯ In dedicated config files 
+  In package.json 
+
+
 ```
 
 ### 2-4. Apply the AppSync plugin
 **Navigate to the newly created project folder and add the cli plugin:**
 
 ```
-cd my-new-app
-vue add appsync
+$ cd vue-appsync-study-example
+$ vue add appsync
 
 ? Add an AppSync Example page? Yes
 ? What is the datasource type? AMAZON_DYNAMODB
@@ -272,14 +288,11 @@ export default awsmobile;
 
 ### 2-6. Start your app
 ```
-npm run serve
+$ npm run serve
 ```
 
-### 2-7. Access http://localhost:8080/ and play with the AppSyncExample
+### 2-7. Access http://localhost:8080 and play with the AppSyncExample
 ![GraphQL Client App](https://raw.githubusercontent.com/komushi/vue-appsync-study/master/images/app.png)
 **Check DynamoDB 'BookTable' for mutation results**
 
 ### 2-8. Stop node Node processes
-
-# Reference: 
-* [vue-appsync-study](https://github.com/komushi/vue-appsync-study#option-ii-maunal-approach)
