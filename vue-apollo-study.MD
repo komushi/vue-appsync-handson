@@ -58,7 +58,7 @@ $ vue add apollo
 ```
 
 ## 4. Play with the application
-### 4-1. Start the Apollo GraphQL backend created at [apollo-express-study](apollo-express-study/apollo-express-study.MD#5-play-with-the-messaging-api)
+### 4-1. Start the Apollo GraphQL backend created at [apollo-express-study](apollo-express-study.MD#5-play-with-the-messaging-api)
 
 ### 4-2. Start the Vue.js application
 ```
