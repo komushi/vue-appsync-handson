@@ -292,7 +292,7 @@ $ npm run serve
 ```
 
 ### 2-7. Access http://localhost:8080 and play with the AppSyncExample
-![GraphQL Client App](vue-appsync-study/app.png)
+![GraphQL Client App](app.png)
 **Check DynamoDB 'BookTable' for mutation results**
 
 ### 2-8. Stop node Node processes

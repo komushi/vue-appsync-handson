@@ -69,7 +69,7 @@ $ npm run serve
 ### 4-3. Access http://localhost:8080 and http://localhost:4000/graphql
 **Play with ApolloExample to send and receive messages.**
 **You will notice the appended new messages will appear on vue ApolloExample. This is powered by websocket and GraphQL subscription.**
-![Playground](vue-apollo-study/playground.png "Playground")
-![Vue](vue-apollo-study/vue.png "Playground")
+![Playground](playground.png "Playground")
+![Vue](vue.png "Playground")
 
 ### 4-4. Stop the Client and Server Node processes
