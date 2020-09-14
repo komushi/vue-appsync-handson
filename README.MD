@@ -3,11 +3,11 @@
 **You will learn the basic GraphQL and AWS AppSync**
 
 ## Part I. Single file Apollo GraphQL API
-[Hands-on Tutorial](graphql-express-server/readme.md)
+[Hands-on Tutorial](graphql-express-server)
 This tutorial guides you to create a basic graphql API using the apollo-server-express. It contains only one index.js file with API schema defnition, mock-up data and a local express server with graphql plugin. You will learn GrpahQL query.
 
 ## Part II. Multiple API settings with Apollo GraphQL
-[Hands-on Tutorial](apollo-express-study.MD)
+[Hands-on Tutorial](apollo-express-study)
 This tutorial guides you to create a basic graphql API using the apollo-server-express. It contains 2 sets of API schema defnition, one of which contains a local storage. You will learn GrpahQL query and mutation. 
 
 ## Part III. Vue.js Application connecting to Apollo GraphQL
