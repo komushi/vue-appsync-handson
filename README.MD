@@ -3,7 +3,7 @@
 **You will learn the basic GraphQL and AWS AppSync**
 
 ## Part I. Single file Apollo GraphQL API
-[Hands-on Tutorial](graphql-express-server.MD)
+[Hands-on Tutorial](./graphql-express-server.MD)
 This tutorial guides you to create a basic graphql API using the apollo-server-express. It contains only one index.js file with API schema defnition, mock-up data and a local express server with graphql plugin. You will learn GrpahQL query.
 
 ## Part II. Multiple API settings with Apollo GraphQL
